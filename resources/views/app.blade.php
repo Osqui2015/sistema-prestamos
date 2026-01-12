@@ -14,6 +14,17 @@
         @routes
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
+
+        <style>
+            input, select, textarea {
+                color: #000000 !important; /* Texto negro siempre */
+                background-color: #ffffff !important; /* Fondo blanco siempre */
+            }
+            /* Para que el texto de ayuda (placeholder) se vea gris y no negro */
+            input::placeholder, textarea::placeholder {
+                color: #6b7280 !important;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia
